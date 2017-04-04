@@ -42,9 +42,15 @@ public class MainActivity extends AppCompatActivity {
 
             int max = params[0];
             for (int i = 0; i <= max; i++) {
+
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 publishProgress(i);
             }
-            return "Fin";
+            return "fin";
         }
 
         @Override
