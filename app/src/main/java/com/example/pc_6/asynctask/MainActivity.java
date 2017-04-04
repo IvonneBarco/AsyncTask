@@ -1,5 +1,6 @@
 package com.example.pc_6.asynctask;
 
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,7 +61,25 @@ public class MainActivity extends AppCompatActivity {
             super.onProgressUpdate(values);
             int contador = values[0];
             String cadena = "Contador: "+ contador;
+
             texto.setText(cadena);
+
+            Random colores = new Random();
+            int n = colores.nextInt(3);
+
+            if(n == 1){
+                texto.setTextColor(Color.RED);
+
+            }else{
+                if(n == 2){
+                    texto.setTextColor(Color.BLUE);
+                }else{
+                    texto.setTextColor(Color.YELLOW);
+                }
+
+            }
+
+
             texto.setTextSize(contador);
         }
 
