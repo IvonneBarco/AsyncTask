@@ -64,17 +64,17 @@ public class MainActivity extends AppCompatActivity {
 
             texto.setText(cadena);
 
-            Random colores = new Random();
-            int n = colores.nextInt(3);
+            Random colors = new Random();
+            int n = colors.nextInt(3);
 
             if(n == 1){
-                texto.setTextColor(Color.RED);
+                texto.setTextColor(Color.YELLOW);
 
             }else{
                 if(n == 2){
                     texto.setTextColor(Color.BLUE);
                 }else{
-                    texto.setTextColor(Color.YELLOW);
+                    texto.setTextColor(Color.RED);
                 }
 
             }
